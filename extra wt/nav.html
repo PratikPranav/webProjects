@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <title>Nav bar </title>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <div class="search">
+                <input type="text" name="search" id="search" placeholder="search the websites">
+            </div>
+            <li><a href="#">dropdown</a></li>
+            <ul>
+                <li><a href="a.hmtl">link 1</a></li>
+                <li><a href="b.html">link 2</a></li>
+            </ul>
+        </ul>
+        <!-- <div class="home">Home</div>
+            <div class="menu">Menu
+                <ul>
+                    <li>1</li>
+                    <li>New</li>
+                    <li>dropdown</li>
+                </ul>
+            </div>
+        </div> -->
+</body>
+
+</html>
+<style>
+    /* .navbar ul li{
+        text-decoration: none;
+        list-style: none;
+        
+    } */
+    .navbar {
+        background-color: #bd5e4bed;
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        border: 2px solid black;
+
+        /* border-color: yellow ; */
+    }
+
+    .navbar li {
+        list-style: none;
+        float: left;
+        margin: 0px 10px;
+    }
+
+    .navbar ul {
+        overflow: auto; //bcz when float left it overrides its parent
+        /* margin:5px; */
+    }
+
+    .navbar li a {
+        text-decoration: none;
+
+        /* margin-top: 10px; */
+        /* padding: 4px; */
+        color: white;
+    }
+    .navbar li a :hover {
+          color: yellow;
+          background-color: black;
+    }
+
+
+    .search {
+        float: right;
+        margin: 0px 10px;
+        border-radius: 20px;
+    }
+    .search input{
+        border: 2px solid black;
+        border-radius: 20px;
+    }
+
+    /* .home{
+        width: 20%;
+        line-height: 60px;
+        float: left;
+    }
+    .menu{
+        width: 20%;
+        line-height: 60px;
+       float:right;
+    }
+    ul{
+        list-style: none;
+    }
+    li{
+        display: inline;
+    } */
+    /* .navbar ul{
+        width: 100%;
+        position: relative;
+        padding: 10px;
+    }
+    .navbar ul li:hower{
+        background-color: black;
+    }
+    .navbar ul li ul li{
+        position: inline;
+        padding: 10px;
+        color:black;
+    }
+    .navbar ul li ul{
+        background-color: white;
+        position: relative;
+    } */
+</style>

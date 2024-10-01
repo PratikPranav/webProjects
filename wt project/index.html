@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bata shoe store</title>
+    <link rel="stylesheet" href="exp1.css" type="text/css">
+    <script src="jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    <header>  
+        <div id="menu-bar" class="fa fa-bars"></div>
+        <a href="#" class="logo"><img src="bata.png" alt="bata" height="40"
+                width="70"></a>
+        <nav class="navbar">
+            <a class="active" href="#home">Home</a>
+            <a href="#product">Product</a>
+            <a href="#fearured">Fearured</a>
+
+            <a href="signup.html">signup</a>
+
+            <div class="login-container">
+                <form action="">
+                    <input type="text" placeholder="Username" name="username">
+                    <input type="text" placeholder="Password" name="psw">
+                    <!-- <a href="login.php" class="btn">add to cart</a> -->
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <div class="slidecont">
+        <div class="slides">
+            <img src="slide\download (3).jpeg" alt="" height="500"
+                width="200">
+            <div class="caption">Bata Shoes</div>
+        </div>
+        <div class="slides">
+            <img src="slide\download.jpeg" alt="" height="600">
+            <div class="caption">Bata Ladies Chappal</div>
+        </div>
+        <div class="slides">
+            <img src="slide\images.jpeg" alt="" height="600">
+            <div class="caption">caption text 3</div>
+        </div>
+        <div class="slides">
+            <img src="slide\spots5.jpg" alt="" height="550">
+            <div class="caption">Bata Office Chappal</div>
+        </div>
+        <span class="arrow prev" onclick="controller(-1)">&#10094;</span>
+        <span class="arrow next" onclick="controller(1)">&#10095;</span>
+
+        <script src="exp1.js"> </script>
+    </div>
+    <br>
+
+    <div class="addbox">
+        <j>
+            <marquee id="adt" title="you can hide this also" >Click On the adds to Hide it.</marquee>
+        </j><br>
+        <j><img src="adds\add1.jpeg" alt="add1"></j>
+        <j><img src="adds\add2.jpeg" alt="add2"></j>
+        <j><img src="adds\add3.jpeg" alt="add3"></j>
+        <j><img src="adds\add4.jpeg" alt="add4"></j>
+        
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('j').click();
+            $('j').click(function () {
+                //console.log('you clicked on j ')
+                alert('Are you sure you want to hide this add ?')
+                $(this).hide();
+                jQuery(".adt").toolTip()
+            });
+        });
+        $('j').hover(function(){
+            console.log('you hovered on',this);
+            ('you can also hide this text')
+        });
+
+    </script>
+    <!--end header-->
+    <section class="home" id="home">
+        <div class="slide-container active">
+            <div class="slide">
+                <div class="content">
+                    <span>Limited edition footwear</span>
+                    <br />
+                    <img src="bata.jpg" height=150px width="350px">
+                    <br />
+                    <p style="font-style:italic">
+                        since 1894
+                    </p>
+                    <!--<a href="#" class="btn">add to card</a>-->
+                </div>
+                <div class="image">
+                    <img src="green-8337294-power-9-original-imadr3rrshfxhgff.webp"
+                        class="shoe">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--end home-->
+
+    <section class="product" id="product">
+        <h1 class="heading">latest <span>Products</span></h1>
+        <div class="box-container">
+            <div class="box">
+
+                <div class="content">
+                    <a href="sh.html"><img src="latest products/spots.jpg" align="center"
+                            height="200px" width="300px"></a>
+                    <h3 style="font-style:italic">Sports Shoes</h3>
+                    <div class="price"> 800/- <span> 1000/- </span></div>
+
+                </div>
+            </div>
+            <div class="box">
+
+                <div class="content">
+                    <img src="latest products/spots2.jpg" width="300px" height="200px">
+                    <h3 style="font-style:italic">old skool</h3>
+                    <div class="price">1200/- <span>1350/- </span></div>
+
+                </div>
+            </div>
+            <div class="box">
+
+                <div class="content">
+                    <a href="Hiking.html"><img src="latest products/spots3.jpg" alt=""></a>
+                    <h3 style="font-style:italic">hiking boots</h3>
+                    <div class="price">2300/- <span>2520/-</span></div>
+
+                </div>
+            </div>
+            <div class="box">
+
+                <div class="content">
+                    <img src="latest products/spots9.jpg" alt="">
+                    <h3 style="font-style:italic">Thong Sandals</h3>
+                    <div class="price">650/- <span>700/-</span></div>
+
+                </div>
+            </div>
+            <div class="box">
+
+                <div class="content">
+                    <img src="latest products/spots4.jpg" alt="">
+                    <h3 style="font-style:italic">Business shoes</h3>
+                    <div class="price">2000/- <span>2100/-</span></div>
+
+                </div>
+            </div>
+            <div class="box">
+
+                <div class="content">
+                    <img src="latest products/spots8.jpg" alt="">
+                    <h3 style="font-style:italic">Wedge sandals</h3>
+                    <div class="price">400/- <span>500/-</span></div>
+
+                </div>
+            </div>
+
+
+            <div class="box">
+                <div class="content">
+
+                    <a href="latest products/gumboot.html" onclick="showgum()"><img src="gum.jpg"
+                            align="center" height="200px" width="300px"></a>
+                    <h3 style="font-style:italic">Gum boots</h3>
+                    <div class="price"> 800/- <span> 1000/- </span></div>
+
+                </div>
+            </div>
+            <script>
+                function showgum() {
+                    document.getElementsByTagName("gumboot.html");
+                }
+            </script>
+            <style>
+
+            </style>
+
+
+            <div class="box">
+
+                <div class="content">
+                    <img src="latest products/spots6.jpg" align="center" height="200px"
+                        width="300px">
+                    <h3 style="font-style:italic">Rainy sandals for girls</h3>
+                    <div class="price"> 350/- <span> 420/- </span></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end product-->
+    <section class="featured" id="fearured">
+        <h1 class="heading">New <span>Product</span></h1>
+        <div class="row">
+            <div class="image-container">
+
+                <div class="big-image">
+                    <img src="New products/airmac.jpg" alt="" class="big-image-1">
+                </div>
+            </div>
+            <div class="content">
+                <h3 style="font-style:italic">new airmac shoes</h3>
+
+                <div class="price">1800/- <span>1950/-</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="image-container">
+
+                <div class="big-image">
+                    <img src="New products/sneaker.jpg" alt="" class="big-image-2">
+                </div>
+            </div>
+            <div class="content">
+                <h3 style="font-style:italic">Sneakers for men</h3>
+
+                <div class="price">1500/- <span>1550/-</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="image-container">
+
+                <div class="big-image">
+                    <img src="New products/slipper.jpg" alt="" class="big-image-3">
+                </div>
+            </div>
+            <div class="content">
+                <h3 style="font-style:italic">Slippers</h3>
+
+                <div class="price">900/- <span>980/-</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+        </div>
+    </section>
+    <!--end featured-->
+
+    <footer>
+        <div class="footer">
+            <h4>&#169 BATA Company Shoes</h4>
+            <p>Contact us : +91 9001120090<i class="fas fa-address-book"></i></p>
+        </div>
+    </footer>

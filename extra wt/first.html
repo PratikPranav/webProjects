@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Meta name and keyword helps in seo building. 
+    meta content will be shown below the title when searching on google.
+    -->
+    <!--Meta keyword is actually now discouraged because of its malpractices. -->
+    <meta name="description" content="this is how to build your first webpage">
+    <meta name="keyword" content="first,html,website">
+    <title>My First Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 id ="head">Welcome</h1>
+    <marquee id="marq">hello how are you all ?</marquee>
+     
+    <div class="bgim">
+       <img src="L.jpg" alt="imge">
+    </div>
+
+    <table=border="2">
+        <caption>Names:</caption>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>names</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Pratik</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Pranav</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ol>
+        <li>mango</li>
+        <li>apple</li>
+    </ol>
+    <hr>
+    <hr>
+    <hr>
+    <ul >
+        <li>potato</li>
+        <li>brinjal</li>
+    </ul>
+
+    <p>co<sub>2</sub></p>
+    <p>a<sup>2</sup></p>
+
+    hi This is a
+    amazing website developed by
+    Pratik .
+    <pre>  hi This is a 
+            amazing website developed by
+                 Pratik .</pre>
+
+    <!--header, main, and footer are sementic tags (easily understood )used for good layout -->
+    <!--span , div are non-sementic tags (not understood easily by name )-->
+
+    <header>
+        <nav>
+            Home
+            About
+        </nav>
+    </header>
+
+    <!--main tag includes section,article and aside tags -->
+    <main>
+        <section>
+            <a href="https://dashboard.honeygain.com/" target="_main">click</a>
+            <span>
+                <!--span is a INLINE element , so it takes only that much space only-->
+                <div>
+            </span>
+            <!--div is a BLOCK element , so it takes full space (that full line) upto last-->
+            </div>
+        </section>
+        <article>
+            hi alllooooooooo ooffffffffffffff pppppppppppp
+        </article>
+        <!--this should be used for not main part , mostly used to show adds -->
+        <aside>
+            jjjjjjjjjjj kkkkkkkkkkkkkk llllllllllll
+        </aside>
+    </main>
+
+    <div> <br><br>
+        <form action="#">
+            <input type='text' placeholder="enter your name">
+            <!--we have used label so that even if we click on the text, it will b selected-->
+            <!--the value should be same as what you have typed(display on web) 
+                for eg. if you have typed/displayed sec a and you have put value as sec b 
+            then in backend your value will be sent ie. sec b not sec a .     so b carefull  -->
+            <label for="seca"> 
+                <input type="radio" value="sec a" name="sec" id="seca">Section A
+            </label> 
+            <!--we have used for and id same so that it matches , we do same for all-->
+            <label for="secb">
+                <input type="radio" value="sec b" name="sec" id="secb">Section B
+            </label><!--we have used name same for both radio butons, so that only 1 is selected at a time-->
+            <!--in short labe for = id   ,   value = what you have displayed and for backend evaluation 
+                 and  name for single selections from multiples.   -->
+        </form>
+    </div>
+    <select name="car" id="car">Select your car
+        <option value="..">Select</option>
+        <option value="omni">Omni</option>
+        <option value="m8">maruti 800</option>
+    </select>
+
+    <iframe src="https://www.bing.com" frameborder="3"></iframe>
+    <!--iframe is used to embed online videos (yt video) or any other website in your website-->
+
+    <video src="C:\Users\Pratik\OneDrive\Desktop\pp\DEATH NOTE SEASON 1\01 - Rebirth.mkv" width="200"
+        controls>video</video> <!--controls,height,width,loop and autoplay are the attributes for video tag-->
+
+        <!--id is for particular tag only , while class can be used for a group of tags 
+        for eg. 1 to 5 tags are in one group and 6 to 10 are in 2nd group
+     so if you want to change color of grp 1 you can make changes to class .-->
+
+     <p id="pbox">id is for particular tag only , while class can be used for a group of tags 
+        for eg. 1 to 5 tags are in one group and 6 to 10 are in 2nd group
+     so if you want to change color of grp 1 you can make changes to class</p>
+
+
+     <div class="father">
+        <div class="child1">left</div>
+        <div class="child2">right</div>
+        <div class="child3">bottom left</div>
+        <div class="child4">bottom right</div>
+
+        <div class="childc1">center1</div>
+        <div class="childc2">center2</div>
+     </div>
+<!--here fathers div class is if relative then all the inside(child) div class will be 
+    relative acc to its parent class . even if you do any changes to child classes.-->
+
+<!--so here we do parent as relative to fix its position and for all child we 
+do absolute to change its positions  BUT w.r.t its parent , 
+ie. child postions can be changed but within the limit of parents border.-->
+
+
+    <footer>&copy;</footer>
+
+</body>
+</html>

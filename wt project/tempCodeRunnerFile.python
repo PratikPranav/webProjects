@@ -1,0 +1,75 @@
+import random
+
+# Function to draw the board
+def draw_board(board):
+    print(board[0] + '|' + board[1] + '|' + board[2])
+    print('-+-+-')
+    print(board[3] + '|' + board[4] + '|' + board[5])
+    print('-+-+-')
+    print(board[6] + '|' + board[7] + '|' + board[8])
+
+# Function to check for a winner
+def check_win(board, mark):
+    return ((board[0] == mark and board[1] == mark and board[2] == mark) or
+            (board[3] == mark and board[4] == mark and board[5] == mark) or
+            (board[6] == mark and board[7] == mark and board[8] == mark) or
+            (board[0] == mark and board[3] == mark and board[6] == mark) or
+            (board[1] == mark and board[4] == mark and board[7] == mark) or
+            (board[2] == mark and board[5] == mark and board[8] == mark) or
+            (board[0] == mark and board[4] == mark and board[8] == mark) or
+            (board[2] == mark and board[4] == mark and board[6] == mark))
+
+# Function for the computer to make a move
+def computer_move(board, computer_mark, player_mark):
+    # Check if there's a winning move for the computer
+    for i in range(0, 9):
+        if board[i] == ' ' and check_win(board[:i] + [computer_mark] + board[i+1:], computer_mark):
+            return i
+    
+    # Check if the player has a winning move and block it
+    for i in range(0, 9):
+        if board[i] == ' ' and check_win(board[:i] + [player_mark] + board[i+1:], player_mark):
+            return i
+    
+    # Otherwise, make a random move
+    move = random.choice([i for i in range(0, 9) if board[i] == ' '])
+    return move
+
+# Function for a human player to make a move
+def player_move(board, player_mark):
+    while True:
+        try:
+            move = int(input('Enter a move (0-8): '))
+            if move not in range(0, 9):
+                raise ValueError
+            elif board[move] != ' ':
+                print('That spot is already taken, try again.')
+            else:
+                return move
+        except ValueError:
+            print('Invalid input, try again.')
+
+# Main function to run the game
+def play_game():
+    board = [' ' for i in range(9)]
+    computer_mark = 'O'
+    player_mark = 'X'
+    draw_board(board)
+    
+    while True:
+        # Computer's turn
+        computer_move_index = computer_move(board, computer_mark, player_mark)
+        board[computer_move_index] = computer_mark
+        draw_board(board)
+        if check_win(board, computer_mark):
+            print('The computer wins!')
+            return
+        elif ' ' not in board:
+            print('The game is a draw.')
+            return
+        
+        # Player's turn
+        player_move_index = player_move(board, player_mark)
+        board[player_move_index] = player_mark
+        draw_board(board)
+        if check_win(board,
